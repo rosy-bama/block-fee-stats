@@ -1,5 +1,5 @@
 import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
-import { AppService } from './app.service';
+import { AppService } from '../services/app.service';
 
 @Controller('fees')
 export class AppController {

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { Utils } from './app.utils';
-import { Operation } from './dto';
-import { Helper } from './helper';
+import { Utils } from '../utils/app.utils';
+import { Operation } from '../dto/dto';
+import { Helper } from '../helpers/helper';
 const axios = require('axios')
 
 

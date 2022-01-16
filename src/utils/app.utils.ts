@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import axios from "axios";
-import { Operation } from "./dto";
-import { Helper } from "./helper";
+import { Operation } from "../dto/dto";
+import { Helper } from "../helpers/helper";
 
 @Injectable()
 export class Utils{

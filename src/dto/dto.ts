@@ -1,6 +1,11 @@
 export class Block{
-    // id: number;
-    // hash: string;
+    id: number;
+    level : number;
+    hash: string;
+    min: number;
+    max: number;
+    average: number;
+    median: number;
 }
 export class Operation{
     contents: Contents;
