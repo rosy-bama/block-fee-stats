@@ -7,11 +7,11 @@ export class AppController {
 
   @Get('latest')
   async getStatsForLatestBlock() {
-    return await this.appService.findStatsForLatestBlock();
+    return await this.appService.findStatsForLatestBlock();    
   }
 
   @Get(':id')
-  async getStatsByBlockId(@Param('id') id) {    
+  async getStatsByBlockId(@Param('id') id) {   
     return await this.appService.findStatsByBlockId(id);
   }
 

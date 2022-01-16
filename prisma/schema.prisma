@@ -12,8 +12,12 @@ datasource db {
 
 model Block{
   id Int @id @default(autoincrement())
-  average Float?
-  min Float?
-  max Float?
-  median Float?
+  level Int @unique
+  hash String
+  average Float
+  min Float
+  max Float
+  median Float
+
+  @@map("block")
 }
