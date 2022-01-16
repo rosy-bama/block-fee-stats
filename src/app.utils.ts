@@ -11,11 +11,7 @@ export class Utils{
     // Other Methods
 
   async getUrlResponse(url: string){
-    try {
-      return await axios.get(url)
-    } catch (error) {
-      console.error(error)
-    }
+    return await axios.get(url)
   }
 
   async getLatestBlockHash(): Promise<string>{
@@ -98,7 +94,6 @@ export class Utils{
       average: results.average,
       median: results.median
     }
-
     return await this.helper.createBlock(data)
   }
 }

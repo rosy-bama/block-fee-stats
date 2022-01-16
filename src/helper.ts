@@ -9,11 +9,12 @@ export class Helper{
     ){}
 
     async createBlock(data: Prisma.BlockCreateInput){
-        const block = this.prisma.block.findUnique({
+        const block = await this.prisma.block.findUnique({
             where: {
                 level: data.level
             }
-        })        
+        })
+        
         if(block){
             return "User Already exist"
         }

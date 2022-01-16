@@ -10,14 +10,10 @@ export class AppService {
   constructor(private readonly utils: Utils){}
 
   async findStatsForLatestBlock(): Promise<object>{
-    try {
-      const hash = await this.utils.getLatestBlockHash();
-      const blockId = await this.utils.getBlockId(hash);
+    const hash = await this.utils.getLatestBlockHash();
+    const blockId = await this.utils.getBlockId(hash);
 
-      return await this.findStatsByBlockId(blockId)
-    } catch (error) {
-      console.error(error.message);
-    }
+    return await this.findStatsByBlockId(blockId)
   }
 
   async findStatsByBlockId(id): Promise<object>{
